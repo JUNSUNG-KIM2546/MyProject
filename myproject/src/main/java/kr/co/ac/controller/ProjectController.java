@@ -1,4 +1,4 @@
-package kr.co.ac;
+package kr.co.ac.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
