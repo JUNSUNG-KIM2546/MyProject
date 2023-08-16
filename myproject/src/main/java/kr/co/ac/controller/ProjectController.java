@@ -2,28 +2,35 @@ package kr.co.ac.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/main")
 public class ProjectController {
+	final String path = "crud/";
 	
-	//메인페이지
-	@GetMapping("/home")
-	String home() {
-		return "home";
+	//자랑하기
+	@GetMapping("/Boast")
+	String Boast() {
+		return path + "Boast";
 	}
 	
-	//로그인창
-	@GetMapping("/Login")
-	String Login() {
-		return "Login";
+	//추천게시판
+	@GetMapping("/Recommend")
+	String Recommend() {
+		return path + "Recommend";
 	}
 	
-	//회원가입창
-	@GetMapping("/SingUp")
-	String SingUp() {
-		return "SingUp";
+	//나눔게시판
+	@GetMapping("/Sharing")
+	String Sharing() {
+		return path + "Sharing";
 	}
 	
+	//자유게시판
+	@GetMapping("/community")
+	String homcommunitye() {
+		return path + "community";
+	}
 	
 }

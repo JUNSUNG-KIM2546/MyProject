@@ -33,8 +33,11 @@
 	</logger>
 
 	<!-- Root Logger -->
+		<!-- trace = 모든 오류 다 나오도록 -->
+		<!-- warn = 기본값 -->
+		<!-- info  -->
 	<root>
-		<priority value="warn" />
+		<priority value="trace" />
 		<appender-ref ref="console" />
 	</root>
 	

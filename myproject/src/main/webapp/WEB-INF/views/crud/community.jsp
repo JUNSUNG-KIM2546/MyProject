@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>있냥?!</title>
+    <title>있냥?!(자유게시판)</title>
     <!-- https://fonts.google.com/?subset=korean&noto.script=Kore  폰트 스타일 -->
     <style>
         
@@ -19,7 +19,8 @@
 
 	<div class="nav">
         <div class="logo">
-            <img src="./resources/project/image/Logo/여기있냥.png" alt="">
+        	<a href="home"><img src="./resources/project/image/Logo/여기있냥.png" alt=""></a>
+            
         </div>
         <div class="nav_but">
             <a href=""><img src="./resources/project/image/menuimg/메뉴이미지1-3.png"> 냥이 자랑 </a>
@@ -37,7 +38,7 @@
         <div class="title">
             <h1>주인님의 멋진 모습을 자랑하기</h1>
             <p>집사와 주인님의 추억을 여러 사람들에게 공유해보세요.</p>
-            <button>자랑하기!</button>
+            <button><a href="" style="color: white;">자랑하기!</a></button>
         </div>
     </section>
 
@@ -69,7 +70,7 @@
     <footer>
         <div class="container">
             <div class="left">
-                <img src="./resources/project/image/Logo/너두있냥.png" alt="">
+            	<a href="home"><img src="./resources/project/image/Logo/너두있냥.png" alt=""></a>
                 <h1> 있냥?!</h1>
                 <p><a href="https://www.kopo.ac.kr/daejeon/content.do?menu=8074" target="_blank">https://www.kopo.ac.kr/daejeon/content.do?menu=8074</a></p>
                 <div class="sns">
