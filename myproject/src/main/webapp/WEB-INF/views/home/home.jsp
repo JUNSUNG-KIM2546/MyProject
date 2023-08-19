@@ -29,8 +29,8 @@
             <a href="main/community"><img src="./resources/project/image/menuimg/메뉴이미지4-3.png"> 자유게시판 </a>
         </div>
         <div class="nav2_but">
-            <a href="Login" onclick="window.open(this.href, '_blank', 'width=450, height=500'); return false;">로그인</a>
-            <a href="SingUp" onclick="window.open(this.href, '_blank', 'width=450, height=650'); return false;" >회원가입</a>
+            <a href="Logins" onclick="window.open(this.href, '_blank', 'width=450, height=500'); return false;">로그인</a>
+            <a href="SingUps" onclick="window.open(this.href, '_blank', 'width=450, height=650'); return false;" >회원가입</a>
         </div>
     </div>
 

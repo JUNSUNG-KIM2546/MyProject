@@ -5,23 +5,23 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class RootController {
-	final String path = "home/";
+	final String home = "home/";
 	final String user = "user/";
 	
 	//메인페이지
-	@GetMapping("/home")
+	@GetMapping("/homes")
 	String home() {
-		return path + "home";
+		return home + "home";
 	}
 	
 	//로그인창
-	@GetMapping("/Login")
+	@GetMapping("/Logins")
 	String Login() {
 		return user + "Login";
 	}
 		
 	//회원가입창
-	@GetMapping("/SingUp")
+	@GetMapping("/SingUps")
 	String SingUp() {
 		return user +  "SingUp";
 	}
