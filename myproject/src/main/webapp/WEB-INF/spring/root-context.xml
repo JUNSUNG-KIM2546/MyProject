@@ -8,8 +8,8 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
 		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
-		<property name="username" value="board"></property>
-		<property name="password" value="board"></property>
+		<property name="username" value="itnang"></property>
+		<property name="password" value="itnang"></property>
 	</bean>	
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -22,7 +22,7 @@
 	</bean>
 	
 	
-	<!-- BOARD START -->	<!-- 호출하는 아이디 -->
+	<!-- BOARD START -->	<!-- 호출하는 아이디(mySQL ID젠) -->
    <!--  <bean name="egovBoardIdGnrService" class="egovframework.rte.fdl.idgnr.impl.EgovTableIdGnrServiceImpl" destroy-method="destroy">
     	<property name="dataSource" ref="egov.dataSource"/>
        	<property name="strategy"   ref="boardStrategy"/>	밑에 스트레티지랑 이름이 같아야 한다
