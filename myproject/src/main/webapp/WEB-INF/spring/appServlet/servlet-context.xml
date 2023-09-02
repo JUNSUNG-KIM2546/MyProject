@@ -22,7 +22,7 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="kr.co.ac" />
-	<context:component-scan base-package="kr.co.ac.controller" />
+	
 	
 	
 	

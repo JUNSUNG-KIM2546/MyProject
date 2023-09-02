@@ -10,51 +10,51 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import kr.co.ac.service.CommunityService;
-import kr.co.ac.vo.CommunityVo;
+import kr.co.ac.service.BoardService;
+import kr.co.ac.vo.BoardVo;
 
 @Controller
 @RequestMapping("/main")
-public class CommunityController {
+public class BoardController {
 	final String crud = "crud/";
-	final String path = "community/";
+	final String path = "board/";
 	
 	@Autowired
-	CommunityService communityservice;
+	BoardService boardservice;
 	
 	// 자유게시판
-	@GetMapping("/community")
-	String communitylist(CommunityVo commVO, Model model) {
+	@GetMapping("/board")
+	String boardlist(BoardVo commVO, Model model) {
 		// 공지 게시글
-		commVO.setNoticeAt("Y"); // 공지글
+		commVO.setBoardAt("Y"); // 공지글
 		// java.util.List
-		List<CommunityVo> noticeResultList = communityservice.selectBoardList();
+		List<BoardVo> noticeResultList = boardservice.selectBoardList();
 		model.addAttribute("noticeResultList", noticeResultList);
 
-		commVO.setNoticeAt("N"); // 일반게시글
-		List<CommunityVo> resultList = communityservice.selectBoardList();
+		commVO.setBoardAt("N"); // 일반게시글
+		List<BoardVo> resultList = boardservice.selectBoardList();
 		model.addAttribute("resultList", resultList);
 		
-		List<CommunityVo> list = communityservice.selectBoardList();
-		model.addAttribute("list", list);
+		List<BoardVo> boardlist = boardservice.selectBoardList();
+		model.addAttribute("boardlist", boardlist);
 
 		return crud + path + "list";
 	}
 		
 	@GetMapping("/add")
-	String communityadd( ) {
-		return path + "add";
+	String boardadd( ) {
+		return crud + path + "add";
 	}
 	@PostMapping("/add")
-	String communityadd(CommunityVo item) {
-		communityservice.add(item);
+	String boardadd(BoardVo item) {
+		boardservice.add(item);
 		return "redirect:list";
 		//리다이렉트
 	}
 		
 	@GetMapping("/update/{boardId}")
-	String communityupdate(@PathVariable String boardId, Model model) {
-		CommunityVo item = communityservice.item(boardId);
+	String boardupdate(@PathVariable String boardId, Model model) {
+		BoardVo item = boardservice.item(boardId);
 		
 		model.addAttribute("item",item);
 		
@@ -62,18 +62,18 @@ public class CommunityController {
 	}
 		
 	@PostMapping("/update/{boardId}")
-	String communityupdate(@PathVariable String boardId, CommunityVo item) {
+	String boardupdate(@PathVariable String boardId, BoardVo item) {
 		item.setBoardId(boardId);
 		
-		communityservice.update(item);
+		boardservice.update(item);
 		
 		return "redirect:../list";
 		//book/update/13 -> "redirect:list" -> /book/update/list
 	}
 		
 	@GetMapping("/delete/{boardId}")
-	String communitydelete(@PathVariable String boardId) {
-		communityservice.delete(boardId);
+	String boarddelete(@PathVariable String boardId) {
+		boardservice.delete(boardId);
 			
 		return "redirect:../list";
 	}
