@@ -12,6 +12,12 @@
         
     </style>
 </head>
+	<!-- 네이버 지도API -->
+	<!-- <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=3bu1logtcs"></script> -->
+	
+	<!-- 카카오 지도API -->
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a2934dc1e36b528c374fc8c1f2fa06ca"></script>
+	
 	<link rel="shortcut icon" href="./resources/project/image/favicon/favicon.ico">
 	<link rel="stylesheet" href="./resources/project/css/nav.css">
 	
@@ -71,7 +77,7 @@
     <footer>
         <div class="container">
             <div class="left">
-            	<a href="home"><img src="./resources/project/image/Logo/너두있냥.png" alt=""></a>
+            	<a href="homes"><img src="./resources/project/image/Logo/너두있냥.png" alt=""></a>
                 <h1> 있냥?!</h1>
                 <p><a href="https://www.kopo.ac.kr/daejeon/content.do?menu=8074" target="_blank">https://www.kopo.ac.kr/daejeon/content.do?menu=8074</a></p>
                 <div class="sns">
@@ -91,6 +97,11 @@
                     </ul>
                 </div>
                 <div class="list">
+                	<h2>찾아오는 길</h2>
+                	<br/>
+                	<div id="map" style="width:400px;height:300px;"></div>
+                </div>
+                <!-- <div class="list">
                     <h2>ABOUT</h2>
                     <ul>
                         <li>about #1</li>
@@ -98,7 +109,7 @@
                         <li>about #3</li>
                         <li>about #4</li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="copy_right">
@@ -121,6 +132,27 @@
         changeBackground(); // 초기 이미지 설정
         setInterval(changeBackground, 3000);
     </script>
+    
+    <!-- 네이버 지도API -->
+    <!-- <script>
+		var mapOptions = {
+		    center: new naver.maps.LatLng(36.350765457557735, 127.45304248848758),	//지도의 중심좌표.
+		    zoom: 17	//지도의 레벨(확대, 축소 정도)
+		};
+		
+		var map = new naver.maps.Map('map', mapOptions);	//지도 생성 및 객체 리턴
+	</script> -->
+	
+	<!-- 카카오 지도API -->
+	<script>
+		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+		var options = { //지도를 생성할 때 필요한 기본 옵션
+			center: new kakao.maps.LatLng(36.350765457557735, 127.45304248848758), //지도의 중심좌표.
+			level: 3 //지도의 레벨(확대, 축소 정도)
+		};
+	
+		var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+	</script>
     
 </body>
 </html>
