@@ -14,16 +14,4 @@ public class RootController {
 		return home + "home";
 	}
 	
-	//로그인창
-	@GetMapping("/Logins")
-	String Login() {
-		return user + "Login";
-	}
-		
-	//회원가입창
-	@GetMapping("/SingUps")
-	String SingUp() {
-		return user +  "SingUp";
-	}
-	
 }
