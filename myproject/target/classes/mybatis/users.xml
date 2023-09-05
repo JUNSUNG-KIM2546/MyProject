@@ -15,16 +15,16 @@
 	</resultMap>
 	
 	<sql id="search">
-		SELECT * FROM board 
+		SELECT * FROM users 
 		<where>
 			<if test="search == 1">
-				board_id = #{keyword}
+				id = #{keyword}
 			</if>
 			<if test="search == 2">
-				board_sj LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+				name LIKE CONCAT(CONCAT('%', #{keyword}), '%')
 			</if>
 		</where>
-		ORDER BY board_id
+		ORDER BY id
 	</sql>
 	
 	<select id="total" resultType="Integer">
@@ -43,34 +43,26 @@
 	
 	<select id="item" resultType="UsersVo">
 		SELECT *
-		FROM board
-		WHERE board_id = #{boardId}
+		FROM users
+		WHERE id = #{id}
 	</select>
 	
 	<insert id="singup">
-		INSERT INTO board (
-			BOARD_ID, 
-			BOARD_SJ, 
-			INQIRE_CO, 
-			NOTICE_AT, 
-			OTHBC_AT, 
-			USE_AT,
-			FRST_REGIST_PNTTM,
-			FRST_REGISTER_ID,
-			LAST_UPDT_PNTTM,
-			LAST_UPDUSR_ID
+		INSERT INTO users (
+			ID,
+			PASS,
+			NAME,
+			EMAIL,
+			PHONE,
+			SBSCRBDE
 		)
 		VALUES (
-			#{boardId},
-			#{boardSj},
-			0,
-			'Y',
-			'Y',
-			'Y',
-			SYSDATE,
-			'admin',
-			SYSDATE,
-			'admin'
+			#{id},
+			#{pass},
+			#{name},
+			#{email},
+			#{phone},
+			SYSDATE
 		)
 	</insert>
 	

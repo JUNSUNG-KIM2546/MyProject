@@ -21,7 +21,7 @@ public class BoardDaoImpl implements BoardDao {
 
 	@Override
 	public void add(BoardVo item) {
-		sql.insert("board.boardadd");
+		sql.insert("board.boardadd", item);
 	}
 
 	@Override

@@ -48,7 +48,7 @@ public class BoardController {
 	@PostMapping("/add")
 	String boardadd(BoardVo item) {
 		boardservice.add(item);
-		return "redirect:list";
+		return "redirect:/main/board";
 		//리다이렉트
 	}
 		

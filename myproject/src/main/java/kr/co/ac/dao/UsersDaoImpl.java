@@ -16,7 +16,7 @@ public class UsersDaoImpl implements UsersDao {
 
 	@Override
 	public void singup(UsersVo item) {
-		sql.insert("users.singup");
+		sql.insert("users.singup", item);
 	}
 
 	@Override

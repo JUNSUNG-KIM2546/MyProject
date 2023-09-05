@@ -44,18 +44,16 @@
 			BOARD_SJ,
 			BOARD_CN,
 			BOARD_CO,
-			BOARD_AT,
 			BOARD_IMG,
 			BOARD_FRST
 		)
 		VALUES (
 			BOARD_SQ.nextval,
-			#{Userid},
+			#{userId},
 			#{boardSj},
 			#{boardCn},
-			#{boardCo}',
-			#{boardAt},
-			#{boardImg}
+			0,
+			#{boardImg},
 			SYSDATE
 		)
 	</insert>

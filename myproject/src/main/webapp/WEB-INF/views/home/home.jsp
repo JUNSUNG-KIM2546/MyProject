@@ -35,8 +35,8 @@
             <a href="main/board"><img src="./resources/project/image/menuimg/메뉴이미지4-3.png"> 자유게시판 </a>
         </div>
         <div class="nav2_but">
-            <a href="./Logins" onclick="window.open(this.href, '_blank', 'width=450, height=500'); return false;">로그인</a>
-            <a href="./SingUps" onclick="window.open(this.href, '_blank', 'width=450, height=650'); return false;" >회원가입</a>
+            <a href="./Logins" onclick="window.open(this.href, '_blank', 'width=450, height=600'); return false;">로그인</a>
+            <a href="./SingUps" onclick="window.open(this.href, '_blank', 'width=450, height=700'); return false;" >회원가입</a>
         </div>
     </div>
 
@@ -50,8 +50,7 @@
 
     <section class="intro">
         <div class="card">
-            <img src="./resources/project/image/g
-            hnimg/광고로고.png" alt="">
+            <img src="./resources/project/image/ghnimg/광고로고.png" alt="">
             <h1>광고 문의</h1>
             <p>주소 : 대전광역시 동구 우암로 352 - 21 비전관 729호</p>
             <p>E-Mail : junsung2546@naver.com</p>
@@ -99,7 +98,7 @@
                 <div class="list">
                 	<h2>찾아오는 길</h2>
                 	<br/>
-                	<div id="map" style="width:400px;height:300px;"></div>
+                	<div id="map" style="width:360px;height:270px;"></div>
                 </div>
                 <!-- <div class="list">
                     <h2>ABOUT</h2>

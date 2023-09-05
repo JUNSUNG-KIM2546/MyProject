@@ -17,14 +17,16 @@
     <div class="login-wrapper">
         <img src="./resources/project/image/Logo/여기있냥.png" alt="">
         <h2><span style="text-shadow:2px 2px 2px #000;">Login</span></h2>
-        <form action="서버의url" id="login-form" method="post">
-            <input type="text" name="userId" placeholder="ID">
-            <input type="password" name="userPassword" placeholder="Password">
+        <!-- 폼에 액션이 없으면 주소 그대로 보낸다 -->
+        <form id="login-form" method="post">
+            <input type="text" name="id" placeholder="ID">
+            <input type="password" name="pass" placeholder="Password">
             <label for="remember-check">
                 <input type="checkbox" id="remember-check">아이디 저장
             </label>
             <input type="submit" value="Login">
         </form>
+        <a href="/ac/SingUps" onclick="window.open(this.href, '_blank', 'width=450, height=700'); return false;"><button onclick=" window.close();">Singup</button></a>
     </div>
 
 </body>
