@@ -66,6 +66,6 @@
 	
 	<delete id="boarddelete">
 		DELETE FROM board
-		WHERE USER_ID = #{UsersVo.id} AND BOARD_ID = #{boardId}
+		WHERE BOARD_ID = #{boardId}
 	</delete>
 </mapper>

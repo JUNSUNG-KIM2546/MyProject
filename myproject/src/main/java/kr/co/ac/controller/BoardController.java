@@ -40,7 +40,8 @@ public class BoardController {
 
 		return crud + path + "list";
 	}
-		
+	
+	// 자유게시판 등록
 	@GetMapping("/add")
 	String boardadd( ) {
 		return crud + path + "add";
@@ -51,7 +52,8 @@ public class BoardController {
 		return "redirect:/main/board";
 		//리다이렉트
 	}
-		
+	
+	// 자유게시판 업데이트
 	@GetMapping("/update/{boardId}")
 	String boardupdate(@PathVariable String boardId, Model model) {
 		BoardVo item = boardservice.item(boardId);
@@ -60,22 +62,22 @@ public class BoardController {
 		
 		return path + "update";
 	}
-		
 	@PostMapping("/update/{boardId}")
 	String boardupdate(@PathVariable String boardId, BoardVo item) {
 		item.setBoardId(boardId);
 		
 		boardservice.update(item);
 		
-		return "redirect:../list";
+		return "redirect:../board";
 		//book/update/13 -> "redirect:list" -> /book/update/list
 	}
 		
+	// 자유게시판 삭제
 	@GetMapping("/delete/{boardId}")
 	String boarddelete(@PathVariable String boardId) {
 		boardservice.delete(boardId);
 			
-		return "redirect:../list";
+		return "redirect:../board";
 	}
 
 }

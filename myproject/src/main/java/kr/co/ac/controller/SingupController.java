@@ -19,13 +19,13 @@ public class SingupController {
 	@Autowired
 	UsersService usersservice;
 		
-	//로그인창
+	// 로그인창
 	@GetMapping("/Logins")
 	String Login() {
 		return user + "Login";
 	}
 		
-	//회원가입창
+	// 회원가입창
 	@GetMapping("/SingUps")
 	String SingUp() {
 		return user +  "SingUp";
@@ -33,7 +33,7 @@ public class SingupController {
 	@PostMapping("/SingUps")
 	String usersadd(UsersVo item) {
 		usersservice.SingUp(item);
-		return "redirect:Ulist";
+		return "redirect:hello";
 		//리다이렉트
 	}
 	
@@ -46,7 +46,7 @@ public class SingupController {
 		return user + "Ulist";
 	}
 	
-	//회원업데이트
+	// 회원업데이트
 	@GetMapping("/USERupdate/{id}")
 	String usersupdate(@PathVariable String id, Model model) {
 		UsersVo item = usersservice.item(id);
@@ -65,7 +65,7 @@ public class SingupController {
 		//book/update/13 -> "redirect:list" -> /book/update/list
 	}
 	
-	//회원삭제
+	// 회원삭제
 	@GetMapping("/USERdelete/{id}")
 	String usersdelete(@PathVariable String id) {
 		usersservice.delete(id);

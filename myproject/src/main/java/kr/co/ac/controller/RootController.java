@@ -8,10 +8,16 @@ public class RootController {
 	final String home = "home/";
 	final String user = "user/";
 	
-	//메인페이지
+	// 메인페이지
 	@GetMapping("/homes")
 	String home() {
 		return home + "home";
+	}
+	
+	// 가입완료창
+	@GetMapping("/hello")
+	String hello() {
+		return home + "hello";
 	}
 	
 }
