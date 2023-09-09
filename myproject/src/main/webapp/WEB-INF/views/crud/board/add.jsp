@@ -30,7 +30,7 @@
 			</div>
 			<div>
 				<label>이미지:</label>
-				<input type="text" name="boardImg">
+				<input type="file" name="boardImg">
 			</div>
 			
 			<div>

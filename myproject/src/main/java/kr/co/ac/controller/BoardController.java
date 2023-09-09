@@ -60,7 +60,7 @@ public class BoardController {
 		
 		model.addAttribute("item",item);
 		
-		return path + "update";
+		return crud + path + "update";
 	}
 	@PostMapping("/update/{boardId}")
 	String boardupdate(@PathVariable String boardId, BoardVo item) {

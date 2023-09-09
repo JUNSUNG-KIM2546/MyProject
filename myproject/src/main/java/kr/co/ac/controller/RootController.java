@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class RootController {
 	final String home = "home/";
 	final String user = "user/";
+	final String portfolio = "portfolio/";
 	
 	// 메인페이지
 	@GetMapping("/homes")
@@ -18,6 +19,12 @@ public class RootController {
 	@GetMapping("/hello")
 	String hello() {
 		return home + "hello";
+	}
+	
+	// 포트폴리오 (portfolio)
+	@GetMapping("/portfolio")
+	String portfolio() {
+		return portfolio + "portfolio";
 	}
 	
 }
