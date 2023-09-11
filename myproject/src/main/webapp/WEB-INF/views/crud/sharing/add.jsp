@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>자유게시판 등록</title>
+<title>Insert title here</title>
 </head>
 <body>
 	<div>

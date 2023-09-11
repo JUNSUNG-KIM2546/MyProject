@@ -25,7 +25,7 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public BoardVo item(String boardId) {
+	public BoardVo item(Long boardId) {
 		return boarddao.item(boardId);
 	}
 
@@ -35,7 +35,7 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public void delete(String boardId) {
+	public void delete(Long boardId) {
 		boarddao.delete(boardId);
 	}
 

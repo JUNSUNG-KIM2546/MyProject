@@ -8,11 +8,11 @@ public interface BoardDao {
 
 	void add(BoardVo item);
 
-	BoardVo item(String boardId);
+	BoardVo item(Long boardId);
 
 	void update(BoardVo item);
 
-	void delete(String boardId);
+	void delete(Long boardId);
 
 	List<BoardVo> boardlist();
 

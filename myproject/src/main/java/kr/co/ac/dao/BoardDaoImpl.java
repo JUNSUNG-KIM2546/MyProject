@@ -25,7 +25,7 @@ public class BoardDaoImpl implements BoardDao {
 	}
 
 	@Override
-	public BoardVo item(String boardId) {
+	public BoardVo item(Long boardId) {
 		return sql.selectOne("board.item", boardId);
 	}
 
@@ -36,7 +36,7 @@ public class BoardDaoImpl implements BoardDao {
 	}
 
 	@Override
-	public void delete(String boardId) {
+	public void delete(Long boardId) {
 		sql.delete("board.boarddelete", boardId);
 		
 	}

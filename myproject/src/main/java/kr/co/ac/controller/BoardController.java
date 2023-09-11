@@ -55,7 +55,7 @@ public class BoardController {
 	
 	// 자유게시판 업데이트
 	@GetMapping("/update/{boardId}")
-	String boardupdate(@PathVariable String boardId, Model model) {
+	String boardupdate(@PathVariable Long boardId, Model model) {
 		BoardVo item = boardservice.item(boardId);
 		
 		model.addAttribute("item",item);
@@ -63,7 +63,7 @@ public class BoardController {
 		return crud + path + "update";
 	}
 	@PostMapping("/update/{boardId}")
-	String boardupdate(@PathVariable String boardId, BoardVo item) {
+	String boardupdate(@PathVariable Long boardId, BoardVo item) {
 		item.setBoardId(boardId);
 		
 		boardservice.update(item);
@@ -74,7 +74,7 @@ public class BoardController {
 		
 	// 자유게시판 삭제
 	@GetMapping("/delete/{boardId}")
-	String boarddelete(@PathVariable String boardId) {
+	String boarddelete(@PathVariable Long boardId) {
 		boardservice.delete(boardId);
 			
 		return "redirect:../board";

@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>kr.co</groupId>
-	<artifactId>ac</artifactId>
-	<name>myproject</name>
+	<groupId>kr.ac</groupId>
+	<artifactId>kopo</artifactId>
+	<name>BookShop</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
-		<java-version>1.8</java-version>
+		<java-version>11</java-version>
 		<org.springframework-version>4.3.30.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
@@ -59,10 +59,9 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<!-- log4j 최신 -->
 			<groupId>org.apache.logging.log4j</groupId>
-		    <artifactId>log4j-core</artifactId>
-		    <version>2.20.0</version>
+    		<artifactId>log4j-core</artifactId>
+    		<version>2.20.0</version>
 			<exclusions>
 				<exclusion>
 					<groupId>javax.mail</groupId>
@@ -116,17 +115,15 @@
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-		</dependency>  
+		</dependency>   
 		
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
-		<!-- 스프링 JDBC -->
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-jdbc</artifactId>
-		    <version>${org.springframework-version}</version>
+		    <version>${org.springframework-version}</version> <!-- 스프링 버전에 맞는 JDBC 위에 스프링 버전 EL로 맞추면 스프링 버전만 바꾸어도 여기는 자동으로 따라간다 -->
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
 		<!-- 마이바티스 버전 -->
 		<dependency>
 		    <groupId>org.mybatis</groupId>
@@ -134,23 +131,20 @@
 		    <version>3.5.13</version>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
 		<!-- 마이바티스 스프링 버전 -->
 		<dependency>
 		    <groupId>org.mybatis</groupId>
 		    <artifactId>mybatis-spring</artifactId>
 		    <version>2.1.1</version>
 		</dependency>
-	
-		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
-		<!-- Apache Commons DBCP(커넥션풀(커넥션에 대한 풀링) DBCP2) 버전 -->
+		     
+		<!-- 커넥션풀(커넥션에 대한 풀링) dbcp2 버전 -->
 		<dependency>
 		    <groupId>org.apache.commons</groupId>
 		    <artifactId>commons-dbcp2</artifactId>
 		    <version>2.9.0</version>
 		</dependency>
-	
-		 
+		     
 	</dependencies>
     <build>
         <plugins>
@@ -173,8 +167,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.5.1</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>11</source>
+                    <target>11</target>
                     <compilerArgument>-Xlint:all</compilerArgument>
                     <showWarnings>true</showWarnings>
                     <showDeprecation>true</showDeprecation>

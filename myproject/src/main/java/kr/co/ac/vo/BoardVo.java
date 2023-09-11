@@ -3,7 +3,7 @@ package kr.co.ac.vo;
 public class BoardVo {
 
 	//게시판 ID
-	private String boardId;
+	private Long boardId;
 	
 	//사용자 ID
 	private String userId;
@@ -32,11 +32,11 @@ public class BoardVo {
 	//최종수정시점
 	private java.util.Date boardLast;
 
-	public String getBoardId() {
+	public Long getBoardId() {
 		return boardId;
 	}
 
-	public void setBoardId(String boardId) {
+	public void setBoardId(Long boardId) {
 		this.boardId = boardId;
 	}
 
