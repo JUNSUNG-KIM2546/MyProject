@@ -39,8 +39,8 @@
             <img src="../resources/project/portfolio/KIM JunSung.jpg" class="cover">
         </div>
         <div class="content">
-            <h2>Hi, I am<br><span>JunSung Kim</span></h2>
-            <p>1995 06 22 대전광역시 우암로 352-21, amet consectetur adipisicing elit. Eius totam recusandae nobis! Reprehenderit officiis ducimus vel, ex, ea obcaecati iusto eum optio delectus odit aut, provident sint corporis possimus dolores.</p>
+            <h2>Hi, I am<br><span>JunSung KIM</span></h2>
+            <p>1995 06 22 대전광역시 동구 우암로 352-21, amet consectetur adipisicing elit. Eius totam recusandae nobis! Reprehenderit officiis ducimus vel, ex, ea obcaecati iusto eum optio delectus odit aut, provident sint corporis possimus dolores.</p>
             <a href="#" class="btn">Download My CV</a>
         </div>
     </section>
